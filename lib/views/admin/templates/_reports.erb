@@ -1,0 +1,9 @@
+<ul id="dashboard">
+	<% klass.reports.each_pair do |name, count| %>
+			<li>
+      		<p><%= count %></p>
+      		<h3><%= adminnie_humanize(name) %></h3>
+      </li>
+	<% end %>
+</ul>
+<div id="description"><%= klass.description %></div>

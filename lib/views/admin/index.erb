@@ -1,0 +1,11 @@
+<ul id="dashboard">
+	<% adminnie_reports_for_index.each_with_index do |report,i| %>
+		<% @renderer.update(report[0].to_s) %>
+			<li<%= ' class="row-end"' if (i+1)%4 == 0 %>>
+			  <h2><%= (@renderer.display_plural) %></h2>
+      		<p><%= report[2] %></p>
+      		<h3><%= adminnie_humanize(report[1]) %></h3>
+      		<a href="<%= adminnie_admin_url_for "/admin/#{@renderer.link}" %>">More &rsaquo;</a>
+      </li>
+	<% end %>
+</ul>

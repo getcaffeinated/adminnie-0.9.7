@@ -1,0 +1,104 @@
+bf_dev:
+  adapter: postgres
+  host: localhost
+  username: root
+  password:
+  database:
+  
+robb_dev:
+  adapter: postgres
+  host: localhost
+  username:
+  password:
+  database:
+  
+kd_dev:
+  adapter: postgres
+  host: localhost
+  username: mast_dev
+  password: m4$t
+  database: mast_dev
+  
+lk_dev:
+  adapter: postgres
+  host: localhost
+  username: root
+  password:
+  database:
+  
+mj_dev:
+  adapter: postgres
+  host: localhost
+  username:
+  password:
+  database:
+  
+er_dev:
+  adapter: postgres
+  host: localhost
+  username:
+  password:
+  database:
+  
+ce_dev:
+  adapter: postgres
+  host: localhost
+  username: eignerchris
+  password:
+  database: test
+  
+dh_dev:
+  adapter: postgres
+  host: localhost
+  username:
+  password:
+  database:
+
+kn_dev:
+  adapter: postgres
+  host: localhost
+  username:
+  password:
+  database:
+
+dc_dev:
+  adapter: postgres
+  host: localhost
+  username: root
+  password:
+  database:
+      
+jo_dev:
+  adapter: postgres
+  host: localhost
+  username: poeks
+  password:
+  database: poeks
+   
+poeks_dev:
+  adapter: postgres
+  host: localhost
+  username: root
+  password:
+  database:
+
+test:
+  adapter: postgres
+  host: localhost
+  username:
+  password:
+  database:
+  
+scg_staging:
+  adapter: postgres
+  host: localhost
+  username: scgdeux
+  password: !scgdeuxdeux
+  database: scg_staging
+  
+production:
+  adapter: postgres
+  host: localhost
+  username:
+  password:
+  database:

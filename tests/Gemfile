@@ -1,0 +1,51 @@
+source "http://rubygems.org"
+source "http://gems.stepchangecloud.com"
+
+gem 'dm-core',                   '1.0.2'
+gem 'dm-migrations',             '1.0.2'
+gem 'dm-validations',            '1.0.2'
+gem 'dm-aggregates',             '1.0.2'
+gem 'dm-timestamps',             '1.0.2'
+gem 'dm-types',                  '1.0.2'
+gem 'dm-postgres-adapter',       '1.0.2'
+gem 'mailfactory',               '1.4.0'
+gem 'rack',                      '1.2.1'
+gem 'rack-cookie_monster',       '1.0.1',  :require => 'rack/cookie_monster'
+gem 'rack_hoptoad',              '0.1.5',  :require => 'rack/hoptoad'
+
+gem 'rack_errorpage',            '1.0.0'
+gem 'sail_monitor',              '0.669'
+gem 'scg_metrics',               '0.4'
+gem 'sinatra',                   '1.1.0',  :require => 'sinatra/base'
+gem 'sinatra-original_gangster', '2.1.3',  :require => 'sinatra/original_gangster'
+gem 'toadhopper',                '1.0.1'
+
+gem 'dm-sweatshop',              '1.0.2',  :require => nil
+gem 'rack-test',                 '0.5.6',  :group => :test
+gem 'contest',                   '0.1.2',  :group => :test
+
+gem 'randexp',									 '0.1.5'
+gem 'sinatra_messages', 				 '1.1'
+gem 'dm-fixer_upper', 					 '1.1.1',  :require => nil
+gem 'confit',										 '1.0'
+gem 'rake',                      '0.8.7'
+gem 'rack-rest_book',            '~>1.0',  :require => 'rack/rest_book'
+
+# Ruby-debug is removed because it doesn't support ruby 1.9. To use internal ruby debugger: require 'debug'
+# If this is inadequate, you may include ruby-debug (or ruby-debug19) like:
+# gem 'ruby-debug', :require => nil
+
+####
+## PLACE APP-SPECIFIC GEM REQUIREMENTS HERE
+####
+
+# https://github.com/marshally/rack-modernizr
+# Uncommenting this will automatically turn it on for the framework.
+# gem 'require 'modernizr'
+
+#gem 'nokogiri', '1.4.4'
+gem 'dm-amazon_image', '2.0.1', :require => 'datamapper/amazon_image'
+gem 'dm-pager', '1.0.3', :git => 'git://github.com/poeks/dm-pagination.git'
+gem 'flickr_fu', '0.3.0'
+gem 'rack-flash', '0.1.1'
+gem 'valibot', '0.1.7'

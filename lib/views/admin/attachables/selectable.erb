@@ -1,0 +1,4 @@
+<select id="update_<%= @prop %>_select_<%= self.id %>" onchange="Ajaxer.replace('update_<%= @prop %><%= self.id %>', '/admin/<%= self.class.link_for %>/<%= self.id %>/<%= @prop %>/'+$('#update_<%= @prop %>_select_<%= self.id %> option:selected').val()+'/?_method=POST', {}, 'POST')">
+	<%= Kernel.const_get(adminnie_camelize(@prop)).select_for(nil, nil, nil, self.send(@prop)) %>
+</select>
+<span id="update_<%= @prop %><%= self.id %>"></span>

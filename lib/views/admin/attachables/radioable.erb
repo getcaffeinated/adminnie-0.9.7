@@ -1,0 +1,2 @@
+<input type="radio" name="<%= @prop %>" id="update_<%= @prop %>_radio_<%= self.id %>" onchange="Ajaxer.replace('update_<%= @prop %><%= self.id %>', '/admin/<%= self.class.link_for %>/<%= self.id %>/<%= @prop %>/'+$('#update_<%= @prop %>_radio_<%= self.id %>').val()+'/?_method=POST', {}, 'POST')" <% if self.send(@prop) %>CHECKED<% end %> value="1">
+<span id="update_<%= @prop %><%= self.id %>"></span>

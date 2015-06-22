@@ -1,0 +1,35 @@
+<% if @controller.sort == 'created_at' %><% @controller.sort = 'created' %><% end %>
+	<tr class="pagination">
+		<td>
+			<select id="sorter" onchange="parent.location.href = '<%= adminnie_admin_url_for "admin" %>/<%= @renderer.link %>/?sort='+$('#sorter').val();">
+					<option value="">Sort by...</option>
+				<% @renderer.klass.sort_attributes.each do |prop| %>
+					<% unless @renderer.klass.is_association?(prop) %>
+						<option value="<%= prop %>" <% if @controller.sort.to_s == prop.to_s %>select <% end %>><%= Extlib::Inflection.humanize(prop) %></option>
+					<% end %>
+				<% end %>
+			</select>
+		</td>
+		<td colspan="<%= @renderer.klass.list_attributes.count + 1 %>">
+			<% if not @controller.results.empty? %>
+	  <%= @controller.results.pager.to_ajax((""), :next_text => '&rsaquo;', :previous_text => '&lsaquo;', :first_text => '&lsaquo;&lsaquo;', :last_text => '&rsaquo;&rsaquo;', :onclick => "Ajaxer.replace('data', '/admin/#{@renderer.link}/items/:current_page'+'&sort=#{@controller.sort}&direction=#{@controller.direction}'); return false;") %>
+			<% end %>
+		</td>
+	</tr>
+
+	<tr>
+	<% @renderer.klass.list_attributes.each do |key| %>
+		<th><% if key == @controller.sort %>&raquo;<% end %><%= Extlib::Inflection.humanize(key) %><% if key == @controller.sort %>&laquo;<% end %></th>
+	<% end %>
+	  <th>&nbsp;</th>
+	</tr>
+
+	<% @controller.results.each do |item| %>
+		<tr id="item_<%= item.id %>">
+			<% item.class.list_attributes.each do |key| %>
+				<td class="<%= key %>"><%= @renderer.render_value(item.send(key)) %></td>
+			<% end %>  		
+			<td><% unless item.class.readonly? %><a href="<%= adminnie_admin_url_for "admin" %>/<%= @renderer.link %>/edit?<%= @renderer.params %>[id]=<%= item.id %>">Edit</a><% end %></td>
+		</tr>
+	<% end %>
+

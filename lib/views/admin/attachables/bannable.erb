@@ -1,0 +1,5 @@
+<select onchange="Ajaxer.replace('banned_<%= @user.id %>', '/admin/<% if @user.banned %>unban_user<% else %>ban_user<% end %>/<%= @user.id %>?_method=POST', {}, 'POST')">
+	<option value="1" <% if @user.banned %>selected<% end %>>true</option>
+	<option value="0" <% if not @user.banned %>selected<% end %>>false</option>
+</select>
+<span id="banned_<%= @user.id %>"></span>

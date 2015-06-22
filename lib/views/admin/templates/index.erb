@@ -1,0 +1,18 @@
+<div>
+	<%= erb :'admin/templates/_reports', :locals => {:klass => @renderer.klass}, :layout => false, :views => @renderer.views %>
+</div>
+
+<script>$(document).ready(function() {Ajaxer.replace('data', ' /admin/<%= @renderer.link %>/items?sort=<%= @controller.sort %>&direction=<%= @controller.direction %>')});</script>
+
+<table width="100%" id="data" cellpadding="0" cellspacing="0">
+
+</table>
+
+
+<div class="footer">
+	<%= @renderer.klass.footer %>
+</div>
+<br/>
+<div id="extra">
+	<a href="<%= adminnie_admin_url_for "/admin/#{@renderer.link}.csv", :skip_facebook => true %>">Download CSV &rsaquo;</a>
+</div>

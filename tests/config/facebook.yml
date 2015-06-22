@@ -1,0 +1,192 @@
+dc_dev:
+  api_key: 5de40e94edda19b8baf7e6d77a55db0f 
+  secret_key: 97d35e2301e4e6e5f89082c29cf1aa93
+  canvas_page_name: dc-local-dev-fbml
+  callback_url: http://facebook.dontexist.com:4445
+  page_id: '117176528330654'
+  app_id: '117176528330654'
+  page_url: http://www.facebook.com/apps/application.php?id=117176528330654
+  page_tab_url: http://www.facebook.com/apps/application.php?id=117176528330654&v=app_117176528330654
+
+bf_dev:
+  api_key: 855b27ffd3263266b10c7a697e51ae4e
+  secret_key: 4d1ab2a30fd623c18f9b06a895b0a3d7
+  canvas_page_name: bf-local-dev-fbml
+  callback_url: http://facebook.dontexist.com:4445
+  page_id: '138957080541'
+  app_id: 
+  page_url: # defaults to app profile page
+  page_tab_url: # defaults to app tab on app profile page
+
+robb_dev:
+  api_key: c2b40c3bb15d29b2726e26e933018a23
+  secret_key: ffe66170a0e74c2faf74c875c61d293e
+  canvas_page_name: robb-dev
+  callback_url: http://facebook.dontexist.com:4448
+  page_id:
+  app_id: 
+  page_url: # defaults to app profile page
+  page_tab_url: # defaults to app tab on app profile page
+
+kd_dev:
+  api_key: c44dbe09f0ab915b7dcf802c49772a9f
+  secret_key: de692fb6903ccca75810637340a6cc8a
+  canvas_page_name: kd-dev-local
+  callback_url: http://facebook.dontexist.com:4444
+  page_id: 135936618320
+  app_id: 182015162605
+  page_url: # defaults to app profile page
+  page_tab_url: # defaults to app tab on app profile page
+
+lk_dev:
+  api_key: d5c2a158e5e72362e4ef9712b69a71d9
+  secret_key: c9eed345770ac837c03375e5c7e28141
+  canvas_page_name: lk-dev-local
+  callback_url: http://facebook.dontexist.com:4447
+  page_id: 166658322932
+  app_id: 127468493374
+  page_url: http://www.facebook.com/apps/application.php?id=127468493374
+  page_tab_url: http://www.facebook.com/apps/application.php?id=127468493374&v=app_127468493374
+
+mj_dev:
+  api_key: 2d221eb9750d00d91add709cd5e010a2
+  secret_key: 552d51ac712b5c975a8be7f2f456b6c1
+  canvas_page_name: dev-mj-local
+  callback_url: http://facebook.dontexist.com:4446
+  page_id: 
+  app_id: 
+  page_url: # defaults to app profile page
+  page_tab_url: # defaults to app tab on app profile page
+
+er_dev:
+  api_key: b172b7ed7488a3080df4f6df7c2052a0
+  secret_key: 8d6fbb9769f3893a3b621daa6fbe6f9c
+  canvas_page_name: er-dev-local
+  callback_url: http://facebook.dontexist.com:4449
+  page_id: 
+  app_id: 
+  page_url: # defaults to app profile page
+  page_tab_url: # defaults to app tab on app profile page
+
+ce_dev:
+  api_key: 2538f2b3bb52097023fdb86d009a5ea7
+  secret_key: 9b5893f848d3c4ce85d49a80f0110920
+  canvas_page_name: ce-dev-local
+  callback_url: http://facebook.dontexist.com:4450
+  page_id: 
+  app_id: 
+  page_url: # defaults to app profile page
+  page_tab_url: # defaults to app tab on app profile page
+
+dh_dev:
+  api_key: dc5d03da7d92aaf6a547abb476c50cbd
+  secret_key: 20a20e38af1726fa899af1412f2bbd66
+  canvas_page_name: dh-local-dev
+  callback_url: http://facebook.dontexist.com:4451
+  page_id: 
+  app_id:   
+  page_url: # defaults to app profile page
+  page_tab_url: # defaults to app tab on app profile page
+
+kn_dev:
+  api_key: 0fc79efde040db884f3a96b28627d1ec
+  secret_key: 739dd89a0c64441c6a9d881d873eb5da
+  canvas_page_name: kn-local-dev
+  callback_url: http://smackamerica.org:4452
+  page_id: 113029462050629
+  app_id: 110494275651930
+  page_url: http://apps.facebook.com/kn-dev-local
+  page_tab_url: http://www.facebook.com/pages/kn-local-dev/113029462050629?v=app_110494275651930
+  uid: 100000986376894
+
+jo_dev:
+  api_key: c3ea10e6e395ce4d347fb652f1e91d0b
+  secret_key: 5c6b49a681dae346a1fcf97e23f3d34a
+  canvas_page_name: jo-dev-local
+  callback_url: http://facebook.dontexist.com:4454
+  page_id: 138744436170791
+  app_id: 138744436170791
+  page_url: http://www.facebook.com/apps/application.php?id=138744436170791
+  page_tab_url: http://www.facebook.com/apps/application.php?id=138744436170791&v=app_138744436170791
+  uid: 100000981545471
+
+poeks_dev:
+  api_key: db82fd1068048d4a5a55692658605537
+  secret_key: 32c2be2b1d58d2940951ec227c0fb4a3
+  canvas_page_name: poeks-dev-local
+  callback_url: http://facebook.dontexist.com:4456
+  page_id: 107131472689813
+  app_id: 107131472689813
+  page_url: http://www.facebook.com/apps/application.php?id=107131472689813
+  page_tab_url: http://www.facebook.com/apps/application.php?id=107131472689813&v=app_107131472689813
+  uid: 655764281
+
+test:
+  api_key: test1
+  secret_key: test1
+  canvas_page_name: doesnotexist
+  callback_url: http://test.stepchanger.com
+  page_id: 
+  app_id: 
+  page_url: 
+  page_tab_url: 
+  
+scg_staging:
+  api_key: 87b43db497848d20903eff847d783005
+  secret_key: fc050f4c2edf120109c87f90f102585e
+  canvas_page_name: scg-staging 
+  callback_url: http://scg-staging.stepchanger.com
+  page_id: '103592400571'
+  app_id: 
+  page_url: http://www.facebook.com/pages/Portland-OR/StepChange-Sandbox/103592400571
+  page_tab_url: 
+
+staging_a:
+  api_key: d46a4602f8e66236e165e766041413dc
+  secret_key: 24c3963bfa18468e6c7518e7f3ad042f
+  canvas_page_name: staging-a
+  callback_url: http://staging-a.stepchangecloud.com
+  app_id: 123571200991744
+  page_id: 123571200991744
+  page_url: http://www.facebook.com/apps/application.php?id=123571200991744
+  page_tab_url: http://www.facebook.com/apps/application.php?id=123571200991744&v=app_123571200991744
+
+staging_b:
+  api_key: be2480a88350c8d3301e01b83426b3f2
+  secret_key: 8f3e89298db1479ea85b9d5c9f5e5d7c
+  canvas_page_name: staging-b
+  callback_url: http://staging-b.stepchangecloud.com
+  app_id: 114847761885535
+  page_id: 114847761885535
+  page_url: http://www.facebook.com/apps/application.php?id=114847761885535
+  page_tab_url: http://www.facebook.com/apps/application.php?id=114847761885535&v=app_114847761885535
+    
+staging_c:
+  api_key: cffee8fe2a2a07be5012e1ed8369611d
+  secret_key: bf66e33cfd975f9c044fe797056f2c15
+  canvas_page_name: staging-c
+  callback_url: http://staging-c.stepchangecloud.com
+  app_id: 100258596687310
+  page_id: 100258596687310
+  page_url: http://www.facebook.com/apps/application.php?id=100258596687310
+  page_tab_url: http://www.facebook.com/apps/application.php?id=100258596687310&v=app_100258596687310
+
+staging_d:
+  api_key: 383134fb5a082f37cc59c35c36956d9c
+  secret_key: d9fdbdf15c4f4f68b90fcb238e4236ff
+  canvas_page_name: staging-d
+  callback_url: http://staging-d.stepchangecloud.com
+  app_id: 111117502276306
+  page_id: 111117502276306
+  page_url: http://www.facebook.com/apps/application.php?id=111117502276306
+  page_tab_url: http://www.facebook.com/apps/application.php?id=111117502276306&v=app_111117502276306
+
+production:
+  api_key: 
+  secret_key:
+  canvas_page_name:
+  callback_url: 
+  page_id: 
+  app_id:
+  page_url: 
+  page_tab_url: 

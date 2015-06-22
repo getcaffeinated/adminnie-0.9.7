@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>Admin</title>
+  
+  <link rel="image_src" href="<%= adminnie_admin_url_for "/img/icon.jpg", :skip_facebook=>true %>" />
+
+  <link rel="stylesheet" href="<%= adminnie_admin_url_for "/css/admin.css", :skip_facebook=>true %>" TYPE="text/css">
+  <link rel="stylesheet" href="<%= adminnie_admin_url_for "/css/jquery.fancybox-1.3.4.css", :skip_facebook=>true %>" TYPE="text/css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="<%= adminnie_admin_url_for "/_valibot/valibot.js", :skip_facebook=>true %>"></script>
+
+	<script>
+
+	Ajaxer = {
+
+	replace : function(elementId, route, data, method) {
+		if (!method) {
+			method = "GET"
+		}
+		$.ajax({
+			type: method,
+			url: route,
+			data: data,
+			success: function(response) {
+				$("#"+elementId).html('').append(response);
+			},
+			failure: function(html){
+				alert("Sorry, try again");
+			}
+		});
+	}
+
+	};
+
+	</script>
+		
+</head>
+
+<body id="<%= @current_page %>">
+	<% unless confit.admin.always_skip_facebook %>
+  	<div id="fb-root"></div>
+		<%= erb :'admin/templates/connect', :layout => false, :views => @renderer.views %>
+	<% end %>
+
+  <div id="container">
+    <header>
+      <h2>Admin - <%= @renderer.display_plural %></h2>
+      <a href="<%= adminnie_admin_url_for '' %>" class="back" />Back to app</a>
+    </header>
+    <div id="main">
+      <%= erb :'admin/templates/_messages', :layout => false, :views => @renderer.views %>
+      <%= erb :'admin/templates/_nav', :layout => false, :views => @renderer.views %>
+      <%= yield %>
+    </div>
+  </div> <!-- end of #container -->
+
+  <!--[if lt IE 7 ]>
+    <script src="<%= adminnie_admin_url_for "js/libs/dd_belatedpng.js", :skip_facebook=>true %>"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+  <![endif]-->
+
+</body>
+</html>

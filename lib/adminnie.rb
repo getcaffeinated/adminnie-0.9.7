@@ -1,0 +1,11 @@
+require File.join File.expand_path(File.join(File.dirname(__FILE__))), 'adminnie', 'model'
+require File.join File.expand_path(File.join(File.dirname(__FILE__))), 'adminnie', 'helpers'
+require File.join File.expand_path(File.join(File.dirname(__FILE__))), 'adminnie', 'render'
+require File.join File.expand_path(File.join(File.dirname(__FILE__))), 'adminnie', 'controller'
+require File.join File.expand_path(File.join(File.dirname(__FILE__))), 'adminnie', 'crudite'
+require File.join File.expand_path(File.join(File.dirname(__FILE__))), 'adminnie', 'admin'
+
+require File.join File.expand_path(File.join(File.dirname(__FILE__))), 'data_mapper', 'collection'
+require File.join File.expand_path(File.join(File.dirname(__FILE__))), 'data_mapper', 'model'
+require File.join File.expand_path(File.join(File.dirname(__FILE__))), 'data_mapper', 'utils'
+require File.join File.expand_path(File.join(File.dirname(__FILE__))), 'data_mapper', 'attachable'

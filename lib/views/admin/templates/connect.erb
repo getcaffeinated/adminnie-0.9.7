@@ -1,0 +1,70 @@
+<script>
+	window.fbAsyncInit = function() {
+    FB.init({appId: '<%= confit.facebook.app_id %>', status: true, cookie: true, xfbml: true});    
+    FB.Canvas.setAutoResize();     
+    FB.Canvas.setSize({ height: $(document).height() });
+    setInterval('FB.Canvas.setSize({ height: $(document).height() })', 5000);
+  };
+  
+  (function() {
+    var e = document.createElement('script'); e.async = true;
+    e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+    document.getElementById('fb-root').appendChild(e);
+  }());
+  
+  $(document).ready(function() {
+    // handle proper targeting inside FB iframe
+    $("a").live('click', function(evt) {
+      evt.target.target == '' ? evt.target.target = '_parent' : evt.target.target = evt.target.target;
+    });
+    $("form").live('submit', function(evt) {
+      evt.target.target == '' ? evt.target.target = '_parent' : evt.target.target = evt.target.target;
+    });
+  });
+	
+	// CONSTANT APP INFO
+	var APP_INFO = {
+		page_tab_url : "<%= adminnie_url_for_page_tab %>",
+		app_index_url : "<%= adminnie_admin_url_for '' %>",
+		skip_facebook_url : "<%= adminnie_admin_url_for '', :skip_facebook => true %>"
+	};
+  
+  // STREAMPUBLISH PARAMS:
+  // name: title of the post which links through
+  // link: the click-through url
+  // picture: image url
+  // caption: secondary title displayed beneath the name
+  // description: body of the post
+  // message: auto-fill the "Say something about this..." box
+  //          This must be empty _unless_ the user created the content
+  //          and expects this box to be auto-filled
+  function streamPublish(name, link, picture, caption, description, message) {    
+    FB.ui({
+      method: 'feed',
+      display: 'iframe',
+      name: name,
+      link: link,
+      picture: picture,
+      caption: caption,
+      description: description,
+      message: message
+    });
+  }
+  
+  // GRANTPERMS PARAMS:
+  // scope: comma-delimited list of permissions (http://developers.facebook.com/docs/authentication/permissions)
+  // redirect_uri: where to head post authentication
+  // NOTE:
+  // this is an alternative authentication method or a way to requrest extended permissions
+  function grantPerms(scope, redirect_uri) {
+    window.parent.location = 'http://www.facebook.com/dialog/oauth/?scope=' + scope + '&client_id=<%= ENV["FACEBOOK_APP_ID"] %>&redirect_uri=' + redirect_uri;
+  }
+</script>
+
+
+
+
+
+
+
+

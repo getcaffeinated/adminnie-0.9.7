@@ -1,0 +1,4 @@
+<select id="update_status_select_<%= self.id %>" onchange="Ajaxer.replace('update_status<%= self.id %>', '/admin/<%= self.class.link_for %>/<%= self.id %>/status_id/'+$('#update_status_select_<%= self.id %> option:selected').val()+'/?_method=POST', {}, 'POST')">
+	<%= Status.select_for('name', Status.all, '', self.status) %>
+</select>
+<span id="update_status<%= self.id %>"></span>

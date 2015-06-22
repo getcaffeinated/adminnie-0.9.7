@@ -1,0 +1,9 @@
+<div>
+	<% unless confit.admin.suppress_dashboard %>
+		<a href="<%= adminnie_admin_url_for "/admin" %>">Home</a>
+	<% end %>
+	<% adminnie_models_for_nav.each do |model| %>
+		<% @renderer.update(model) %>
+			| <a href="<%= adminnie_admin_url_for "/admin/#{@renderer.link}" %>"><%= @renderer.display_plural %></a> 
+	<% end %>
+</div>

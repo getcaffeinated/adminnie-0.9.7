@@ -1,0 +1,34 @@
+<script>
+	$(document).ready(function(){ new Valibot({ modelName: '<%= @renderer.params %>', exclude: ['amazon_file'] }); });
+</script>
+<form method="POST" action="<%= adminnie_admin_url_for "/admin/#{@renderer.link}", :skip_facebook=>true %>" enctype="multipart/form-data">
+
+	<% @results.class.edit_attributes.each do |key| %>
+	  <div class="row">
+		  <label><%= Extlib::Inflection.humanize(key) %></label>
+		  <%= adminnie_formulate(key, @results.send(key)) %>
+		</div>
+	<% end %>
+	
+<% if @renderer.action == 'edit' %><input type="hidden" name="<%= @renderer.params %>[id]" value="<%= @results.id %>"><% end %>
+	<input type="hidden" name="_method" value="POST">
+	
+	
+	<input type="submit" value="<%= @target.capitalize %> <%= @renderer.display_name %>">
+	 <% if @renderer.action == 'edit' and not @results.class.indestructible? %> <a href="<%= adminnie_admin_url_for "/admin/#{@renderer.link}/#{@results.id}?_method=DELETE" %>" onclick="return confirm('Are you sure?')" class="ir btn btn_delete">Delete <%= @renderer.display_name %></a><% end %>
+	
+	<input type="hidden" name="action" value="<%= @target %>">
+	
+	<% if @results.respond_to?('created_at') %>
+	<div>
+		Created: <%= @results.created_at %>
+	</div>
+	<% end %>
+	
+	<% if @results.respond_to?('updated_at') %>
+	<div>
+		Last Updated: <%= @results.updated_at %>
+	</div>
+	<% end %>
+	
+</form>

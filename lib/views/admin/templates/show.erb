@@ -1,0 +1,27 @@
+<div>
+	<% @results.class.edit_attributes.each do |key| %>
+	  <div class="row">
+		  <label><%= Extlib::Inflection.humanize(key) %>:</label>
+		  <%= @results.send(key) %>
+		</div>
+	<% end %>
+
+	<% @results.class.associations.each do |ass| %>
+			<div class="row">
+  		  <label><%= Extlib::Inflection.humanize(ass) %>:</label>
+			  <%= @results.send(ass) %>
+			</div>
+	<% end %>
+
+	<% if @results.respond_to?('created_at') %>
+	<div>
+		Created: <%= @results.created_at %>
+	</div>
+	<% end %>
+	
+	<% if @results.respond_to?('updated_at') %>
+	<div>
+		Last Updated: <%= @results.updated_at %>
+	</div>
+	<% end %>
+</div>	

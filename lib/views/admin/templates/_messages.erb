@@ -1,0 +1,14 @@
+
+<div class="ui-widget" style="display: <% if not adminnie_get_flash(:notice) %>none<% end %>;">
+	<div class="ui-state-highlight ui-corner-all" style="padding: 5px;"> 
+		<p><span class="ui-icon ui-icon-info" style="float: left; margin: -0.1em .3em 0 0;"></span>
+		<span id="notice_message"><%= adminnie_get_flash(:notice) %></span></p>
+	</div>
+</div>
+
+<div class="ui-widget" style="display: <% if not adminnie_get_flash(:error) %>none<% end %>;">
+	<div class="ui-state-error ui-corner-all" style="padding: 5px;"> 
+		<p><span class="ui-icon ui-icon-alert" style="float: left; margin: -0.1em .3em 0 0;"></span> 
+		<span id="error_message"><%= adminnie_get_flash(:error) %></span></p>
+	</div>
+</div>
